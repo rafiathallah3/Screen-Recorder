@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Settings</title>
+		<meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline'" />
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+
+        <style>
+            body {
+				background-color: #17253b;
+			}
+
+            .setting-text {
+                background-color: #3c4a63;
+                border: none;
+                outline: none;
+                color: white;
+                text-decoration: none;
+            }
+
+            .setting-text:focus {
+                outline: 1px solid #3e6f87;
+            }
+
+            .tombol-save-directory {
+                background-color: #3c4a63;
+                color: white;
+                border: 0;
+            }
+
+            .tombol-save-directory:disabled {
+                background-color: #2e394b;
+                color: rgb(183, 183, 183);
+            }
+        </style>
+	</head>
+	<body>
+        <div class="container-fluid mt-2">
+            <form id="semua_setting" onsubmit="return false">
+                <div class="p-3 mb-2" style="background-color: #394357;">
+                    <h5 class="text-white text-center">General</h5>
+                    <div class="d-flex text-white w-100">
+                        <span class="me-3">Save Directory</span>
+                        <input type="text" class="setting-text flex-grow-1 me-2" name="saveDirectory" id="saveDirectory">
+                        <button type="button" class="tombol-save-directory" id="cariSaveDirectory">Browse</button>
+                    </div>
+                </div>
+                <div class="p-3 mb-2" style="background-color: #394357;">
+                    <h5 class="text-white text-center">Keybinds</h5>
+                    <div class="d-flex text-white w-100 mb-2">
+                        <span class="me-3">Start Recording</span>
+                        <input type="text" class="setting-text flex-grow-1 me-2" name="KeybindRecording" id="KeybindRecording" readonly>
+                        <!-- <button class="tombol-save-directory"><i class="bi bi-arrow-left"></i></button> -->
+                    </div>
+                    <div class="d-flex text-white w-100 mb-2">
+                        <span class="me-3">Stop Recording</span>
+                        <input type="text" class="setting-text flex-grow-1 me-2" name="KeybindStopRecording" id="KeybindStopRecording" readonly>
+                        <!-- <button class="tombol-save-directory"><i class="bi bi-arrow-left"></i></button> -->
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="d-flex flex-row justify-content-end" style="position: fixed; bottom: 0; width: 100%; margin-bottom: 1rem; margin-top: 1rem; margin-left: -1rem;">
+            <button type="button" class="tombol-save-directory me-2" id="Apply">Apply</button>
+            <button type="button" class="tombol-save-directory me-2" id="OK">OK</button>
+            <button type="button" class="tombol-save-directory me-2" id="Cancel">Cancel</button>
+        </div>
+	</body>
+</html>
