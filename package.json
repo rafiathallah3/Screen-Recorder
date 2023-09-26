@@ -19,7 +19,7 @@
   "license": "MIT",
   "devDependencies": {
     "@types/electron-json-storage": "^4.5.0",
-    "@typescript-eslint/eslint-plugin": "^4.33.0",
+    "@typescript-eslint/eslint-plugin": "^6.7.3",
     "@typescript-eslint/parser": "^4.33.0",
     "electron": "^24.3.0",
     "eslint": "^7.32.0",
